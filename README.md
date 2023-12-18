@@ -28,9 +28,17 @@ cd yolov5
 pip install -r requirements.txt  # install
 ```
 
-Note: We recommend to install **enot-autodl** and **enot-lite** following these instructions:  
+Note: We recommend to install **enot-autodl==3.4.6** and **enot-lite==0.8.1** following these instructions:  
 [**enot-autodl installation instruction**](https://enot-autodl.rtd.enot.ai/en/latest/installation_guide.html)   
 [**enot-lite installation instruction**](https://enot-lite.rtd.enot.ai/en/latest/installation_guide.html)  
+
+```bash
+mkdir -p $HOME/.hasplm
+echo -e 'broadcastsearch = 0\nserveraddr = 65.109.162.71\ndisable_IPv6 = 0' > $HOME/.hasplm/hasp_26970.ini
+pip install enot-autodl==3.4.6
+wget -O - https://raw.githubusercontent.com/ENOT-AutoDL/ONNX-Runtime-with-TensorRT-and-OpenVINO/master/install.sh | bash
+pip install enot-lite==0.8.1
+```
 
 ## <div align="center">Demo</div>
 There is [**demo notebook**](https://github.com/ENOT-AutoDL/yoqo/blob/master/demo.ipynb) which shows how to prune and quantize YOLOv5 model.
